@@ -214,7 +214,7 @@ class MexcExchangeTests(TestCase):
                 'tradeType': 2,
                 'createTime': 1638156451000,
                 'symbolDisplay': 'MX_USDT',
-                'clientOrderId': 'sell-MX-USDT-1638156451005305'},
+                'clientOrderId': 'sll-MX-USDT-1638156451005305'},
             'channel': 'push.personal.order', 'symbol_display': 'MX_USDT'}
 
     @aioresponses()
@@ -227,7 +227,7 @@ class MexcExchangeTests(TestCase):
             body=json.dumps(mock_response),
         )
 
-        self.exchange.start_tracking_order(order_id="sell-MX-USDT-1638156451005305",
+        self.exchange.start_tracking_order(order_id="sll-MX-USDT-1638156451005305",
                                            exchange_order_id="40728558ead64032a676e6f0a4afc4ca",
                                            trading_pair="MX-USDT",
                                            trade_type=TradeType.SELL,
@@ -235,7 +235,7 @@ class MexcExchangeTests(TestCase):
                                            amount=Decimal("6.3008"),
                                            order_type=OrderType.LIMIT)
 
-        inflight_order = self.exchange.in_flight_orders["sell-MX-USDT-1638156451005305"]
+        inflight_order = self.exchange.in_flight_orders["sll-MX-USDT-1638156451005305"]
 
         mock_user_stream = AsyncMock()
         mock_user_stream.get.side_effect = [self.user_stream_data, asyncio.CancelledError]
@@ -266,7 +266,7 @@ class MexcExchangeTests(TestCase):
             regex_url,
             body=json.dumps(mock_response),
         )
-        self.exchange.start_tracking_order(order_id="sell-MX-USDT-1638156451005305",
+        self.exchange.start_tracking_order(order_id="sll-MX-USDT-1638156451005305",
                                            exchange_order_id="40728558ead64032a676e6f0a4afc4ca",
                                            trading_pair="MX-USDT",
                                            trade_type=TradeType.SELL,
@@ -274,7 +274,7 @@ class MexcExchangeTests(TestCase):
                                            amount=Decimal("6.3008"),
                                            order_type=OrderType.LIMIT)
 
-        inflight_order = self.exchange.in_flight_orders["sell-MX-USDT-1638156451005305"]
+        inflight_order = self.exchange.in_flight_orders["sll-MX-USDT-1638156451005305"]
         stream_data = self.user_stream_data
         stream_data.get("data")["status"] = 5
         mock_user_stream = AsyncMock()
@@ -317,14 +317,14 @@ class MexcExchangeTests(TestCase):
             regex_url,
             body=json.dumps(fee_mock_data),
         )
-        self.exchange.start_tracking_order(order_id="sell-MX-USDT-1638156451005305",
+        self.exchange.start_tracking_order(order_id="sll-MX-USDT-1638156451005305",
                                            exchange_order_id="40728558ead64032a676e6f0a4afc4ca",
                                            trading_pair="MX-USDT",
                                            trade_type=TradeType.SELL,
                                            price=Decimal("3.1504"),
                                            amount=Decimal("6.3008"),
                                            order_type=OrderType.LIMIT)
-        inflight_order = self.exchange.in_flight_orders["sell-MX-USDT-1638156451005305"]
+        inflight_order = self.exchange.in_flight_orders["sll-MX-USDT-1638156451005305"]
         _user_stream = self.user_stream_data
         _user_stream.get("data")["status"] = 2
         mock_user_stream = AsyncMock()
@@ -818,7 +818,7 @@ class MexcExchangeTests(TestCase):
         regex_url = re.compile(f"^{url}".replace(".", r"\.").replace("?", r"\?"))
         mock_api.get(regex_url, body=json.dumps(self.balances_mock_data))
 
-        self.exchange.start_tracking_order(order_id="sell-MX-USDT-1638156451005305",
+        self.exchange.start_tracking_order(order_id="sll-MX-USDT-1638156451005305",
                                            exchange_order_id="40728558ead64032a676e6f0a4afc4ca",
                                            trading_pair="MX-USDT",
                                            trade_type=TradeType.SELL,
@@ -836,7 +836,7 @@ class MexcExchangeTests(TestCase):
         self.async_run_with_timeout(self.resume_test_event.wait())
 
         self.assertEqual(1, len(self.exchange.in_flight_orders))
-        tracked_order: MexcInFlightOrder = self.exchange.in_flight_orders["sell-MX-USDT-1638156451005305"]
+        tracked_order: MexcInFlightOrder = self.exchange.in_flight_orders["sll-MX-USDT-1638156451005305"]
         self.assertEqual(tracked_order.last_state, "NEW")
 
     @aioresponses()

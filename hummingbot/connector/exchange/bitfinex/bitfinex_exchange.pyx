@@ -800,7 +800,7 @@ cdef class BitfinexExchange(ExchangeBase):
         """
         cdef:
             int64_t tracking_nonce = <int64_t > (time.time() * 1e6)
-            str order_id = str(f"sell-{trading_pair}-{tracking_nonce}")
+            str order_id = str(f"sll-{trading_pair}-{tracking_nonce}")
         safe_ensure_future(self.execute_sell(order_id, trading_pair, amount, order_type, price))
         return order_id
 

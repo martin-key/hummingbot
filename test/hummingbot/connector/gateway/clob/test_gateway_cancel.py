@@ -131,7 +131,7 @@ class GatewayCancelUnitTest(unittest.TestCase):
                 self._http_player.replay_timestamp_ms = 1648503309059
                 await connector._create_order(
                     TradeType.SELL,
-                    'sell-SOL-USDC-1658434205059909',
+                    'sll-SOL-USDC-1658434205059909',
                     TRADING_PAIR,
                     amount,
                     sell_price,

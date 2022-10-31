@@ -19,7 +19,7 @@ class FixtureKucoin:
             "id": "5e3cd0540fb53d000961491a", "timeInForce": "GTC", "tradeType": "TRADE",
             "side": "sell", "dealSize": "0.01", "cancelAfter": 0, "dealFunds": "2.1957",
             "stp": "", "postOnly": False, "stopPrice": "0", "size": "0.01", "stop": "",
-            "cancelExist": False, "clientOid": "sell-ETH-USDT-1581043796007943"}}
+            "cancelExist": False, "clientOid": "sll-ETH-USDT-1581043796007943"}}
 
     FILLED_BUY_LIMIT_ORDER = {
         "code": "200000",
@@ -43,7 +43,7 @@ class FixtureKucoin:
             "timeInForce": "GTC", "tradeType": "TRADE", "side": "sell",
             "dealSize": "0.0109999", "cancelAfter": 0, "dealFunds": "2.401058172", "stp": "",
             "postOnly": False, "stopPrice": "0", "size": "0.0109999", "stop": "",
-            "cancelExist": False, "clientOid": "sell-ETH-USDT-1581055817012353"}}
+            "cancelExist": False, "clientOid": "sll-ETH-USDT-1581055817012353"}}
 
     BUY_MARKET_ORDER = {
         "code": "200000",
@@ -73,7 +73,7 @@ class FixtureKucoin:
             "dealFunds": "0", "stp": "", "postOnly": False, "stopPrice": "0",
             "size": "0.01",
             "stop": "", "cancelExist": False,
-            "clientOid": "sell-ETH-USDT-1581056966892386"}}
+            "clientOid": "sll-ETH-USDT-1581056966892386"}}
 
     GET_CANCELED_ORDER = {
         "code": "200000",
@@ -85,7 +85,7 @@ class FixtureKucoin:
             "timeInForce": "GTC", "tradeType": "TRADE", "side": "sell", "dealSize": "0",
             "cancelAfter": 0, "dealFunds": "0", "stp": "", "postOnly": False, "stopPrice": "0",
             "size": "0.01", "stop": "", "cancelExist": True,
-            "clientOid": "sell-ETH-USDT-1581056966892386"}}
+            "clientOid": "sll-ETH-USDT-1581056966892386"}}
 
     ORDER_PLACE_2 = {"code": "200000", "data": {"orderId": "5e3d08516e350a0009bcd272"}}
 

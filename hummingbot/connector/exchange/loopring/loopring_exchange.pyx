@@ -461,7 +461,7 @@ cdef class LoopringExchange(ExchangeBase):
                     dict kwargs = {}):
         cdef:
             int64_t tracking_nonce = <int64_t> get_tracking_nonce()
-            str client_order_id = str(f"sell-{trading_pair}-{tracking_nonce}")
+            str client_order_id = str(f"sll-{trading_pair}-{tracking_nonce}")
         safe_ensure_future(self.execute_sell(client_order_id, trading_pair, amount, order_type, price))
         return client_order_id
 

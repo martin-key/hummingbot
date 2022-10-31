@@ -769,7 +769,7 @@ class MexcExchange(ExchangeBase):
              price: Decimal = s_decimal_NaN, **kwargs) -> str:
 
         tracking_nonce = int(get_tracking_nonce())
-        order_id = str(f"sell-{trading_pair}-{tracking_nonce}")
+        order_id = str(f"sll-{trading_pair}-{tracking_nonce}")
 
         safe_ensure_future(self.execute_sell(order_id, trading_pair, amount, order_type, price))
         return order_id

@@ -596,7 +596,7 @@ class FixtureLiquid:
         "stop_loss": None, "trading_type": "spot", "product_code": "CASH", "funding_currency": "ETH",
         "crypto_account_id": None, "currency_pair_code": "CELETH", "average_price": 0.0, "target": "spot",
         "order_fee": 0.0, "source_action": "manual", "unwound_trade_id": None, "trade_id": None,
-        "client_order_id": "sell-CEL-ETH-1579499322010384"}
+        "client_order_id": "sll-CEL-ETH-1579499322010384"}
 
     ORDERS_GET_AFTER_MARKET_SELL = {
         "models": [
@@ -608,7 +608,7 @@ class FixtureLiquid:
                 "trading_type": "spot", "product_code": "CASH", "funding_currency": "ETH", "crypto_account_id": None,
                 "currency_pair_code": "CELETH", "average_price": "0.00078", "target": "spot", "order_fee": "0.00000078",
                 "source_action": "manual", "unwound_trade_id": None, "trade_id": None,
-                "client_order_id": "sell-CEL-ETH-1579499322010384", "settings": None, "trailing_stop_type": None,
+                "client_order_id": "sll-CEL-ETH-1579499322010384", "settings": None, "trailing_stop_type": None,
                 "trailing_stop_value": None, "executions": [
                     {
                         "id": 253095951, "quantity": "1.0", "price": "0.00078",
@@ -656,7 +656,7 @@ class FixtureLiquid:
         "stop_loss": None, "trading_type": "spot", "product_code": "CASH", "funding_currency": "ETH",
         "crypto_account_id": None, "currency_pair_code": "CELETH", "average_price": 0.0,
         "target": "spot", "order_fee": 0.0, "source_action": "manual", "unwound_trade_id": None,
-        "trade_id": None, "client_order_id": "sell-CEL-ETH-1579575692882646"}
+        "trade_id": None, "client_order_id": "sll-CEL-ETH-1579575692882646"}
 
     ORDERS_GET_AFTER_LIMIT_SELL = {
         "models": [
@@ -668,7 +668,7 @@ class FixtureLiquid:
                 "trading_type": "spot", "product_code": "CASH", "funding_currency": "ETH", "crypto_account_id": None,
                 "currency_pair_code": "CELETH", "average_price": "0.00078", "target": "spot", "order_fee": "0.00000078",
                 "source_action": "manual", "unwound_trade_id": None, "trade_id": None,
-                "client_order_id": "sell-CEL-ETH-1579575692882646", "settings": None, "trailing_stop_type": None,
+                "client_order_id": "sll-CEL-ETH-1579575692882646", "settings": None, "trailing_stop_type": None,
                 "trailing_stop_value": None, "executions": [
                     {
                         "id": 253095951, "quantity": "1.0", "price": "0.00072226",
@@ -690,7 +690,7 @@ class FixtureLiquid:
         "funding_currency": "ETH", "crypto_account_id": None, "currency_pair_code": "CELETH",
         "average_price": 0.0, "target": "spot", "order_fee": 0.0, "source_action": "manual",
         "unwound_trade_id": None, "trade_id": None,
-        "client_order_id": "sell-CEL-ETH-1579588095991611"}
+        "client_order_id": "sll-CEL-ETH-1579588095991611"}
 
     SELL_LIMIT_ORDER_BEFORE_CANCEL = {
         "id": 2022033543, "order_type": "limit", "quantity": "1.0", "disc_quantity": "0.0",
@@ -712,7 +712,7 @@ class FixtureLiquid:
         "product_code": "CASH", "funding_currency": "ETH", "crypto_account_id": None,
         "currency_pair_code": "CELETH", "average_price": 0.0, "target": "spot", "order_fee": 0.0,
         "source_action": "manual", "unwound_trade_id": None, "trade_id": None,
-        "client_order_id": "sell-CEL-ETH-1579588095991611"}
+        "client_order_id": "sll-CEL-ETH-1579588095991611"}
 
     BUY_LIMIT_ORDER_AFTER_CANCEL = {
         "id": 2022033543, "order_type": "limit", "quantity": "1.0", "disc_quantity": "0.0",

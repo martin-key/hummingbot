@@ -966,7 +966,7 @@ cdef class KrakenExchange(ExchangeBase):
         cdef:
             int64_t tracking_nonce = <int64_t> get_tracking_nonce()
             int32_t userref = <int32_t> self.generate_userref()
-            str order_id = str(f"sell-{trading_pair}-{tracking_nonce}")
+            str order_id = str(f"sll-{trading_pair}-{tracking_nonce}")
         safe_ensure_future(self.execute_sell(order_id, trading_pair, amount, order_type, price=price, userref=userref))
         return order_id
 
